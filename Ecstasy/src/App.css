@@ -1132,3 +1132,312 @@ footer{
         transition-duration:0.001ms !important;
     }
 }
+/* ── Nav Auth Buttons ──────────────────────────────────────────────────────── */
+.nav-auth{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-login-btn{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.22);
+    color:white;
+    padding:9px 20px;
+    border-radius:10px;
+    font-size:0.88rem;
+    cursor:pointer;
+    transition:border-color 0.2s, background 0.2s;
+}
+
+.nav-login-btn:hover{
+    border-color:#ff4141;
+    background:rgba(255,65,65,0.08);
+}
+
+.nav-register-btn{
+    padding:9px 20px;
+    font-size:0.88rem;
+    border:none;
+    cursor:pointer;
+}
+
+.nav-user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-username{
+    color:#ff9090;
+    font-size:0.9rem;
+    font-weight:600;
+    letter-spacing:0.05em;
+}
+
+.nav-logout-btn{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.18);
+    color:#aaa;
+    padding:7px 16px;
+    border-radius:8px;
+    font-size:0.82rem;
+    cursor:pointer;
+    transition:border-color 0.2s, color 0.2s;
+}
+
+.nav-logout-btn:hover{
+    border-color:#ff4141;
+    color:white;
+}
+
+/* ── Auth Modal ────────────────────────────────────────────────────────────── */
+.auth-dialog{
+    width:min(440px, 100%);
+}
+
+.auth-form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-top:20px;
+}
+
+.auth-form label{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    color:#f2d5d5;
+    font-size:0.92rem;
+}
+
+.auth-form input{
+    width:100%;
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:12px;
+    background:rgba(255,255,255,0.06);
+    color:white;
+    padding:13px 15px;
+    outline:none;
+    font-size:0.95rem;
+    transition:border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form input:focus{
+    border-color:#ff4b4b;
+    box-shadow:0 0 0 4px rgba(255,0,0,0.14);
+}
+
+.auth-submit{
+    margin-top:4px;
+    width:100%;
+    border:none;
+    cursor:pointer;
+    justify-content:center;
+    font-size:1rem;
+    padding:14px;
+}
+
+.auth-error{
+    color:#ff7070;
+    font-size:0.85rem;
+    text-align:center;
+    padding:10px 14px;
+    background:rgba(255,0,0,0.1);
+    border:1px solid rgba(255,0,0,0.22);
+    border-radius:8px;
+    margin:0;
+}
+
+.auth-success{
+    color:#7effa0;
+    font-size:0.85rem;
+    text-align:center;
+    padding:10px 14px;
+    background:rgba(0,200,80,0.08);
+    border:1px solid rgba(0,200,80,0.22);
+    border-radius:8px;
+    margin:0;
+}
+
+.auth-divider{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:20px 0 14px;
+    color:#555;
+    font-size:0.82rem;
+}
+
+.auth-divider::before,
+.auth-divider::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,0.1);
+}
+
+.google-btn{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.18);
+    color:white;
+    padding:13px;
+    border-radius:12px;
+    font-size:0.95rem;
+    cursor:pointer;
+    transition:background 0.2s, border-color 0.2s;
+}
+
+.google-btn:hover{
+    background:rgba(255,255,255,0.12);
+    border-color:rgba(255,255,255,0.34);
+}
+
+.auth-switch{
+    text-align:center;
+    margin:18px 0 0;
+    color:#888;
+    font-size:0.88rem;
+}
+
+.auth-link{
+    background:none;
+    border:none;
+    color:#ff7070;
+    cursor:pointer;
+    font-size:0.88rem;
+    text-decoration:underline;
+    padding:0;
+}
+
+.auth-link:hover{
+    color:#ff4141;
+}
+
+@media(max-width:768px){
+    nav{
+        flex-wrap:wrap;
+        justify-content:space-between;
+        flex-direction:row;
+        gap:10px;
+        padding:14px 5%;
+    }
+
+    .nav-auth{
+        gap:8px;
+    }
+
+    .nav-login-btn,
+    .nav-register-btn{
+        padding:7px 14px;
+        font-size:0.8rem;
+    }
+}
+
+/* ── Portfolio Section ────────────────────────────────────────────────────── */
+.active-link {
+    color: #ff4141 !important;
+    text-shadow: 0 0 8px rgba(255, 65, 65, 0.6);
+}
+
+.portfolio-section {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 45, 45, 0.4);
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.15);
+}
+
+.portfolio-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #151515;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.portfolio-card-info {
+    padding: 24px;
+}
+
+.portfolio-card-info h3 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+    color: #fff;
+    letter-spacing: 0.04em;
+}
+
+.portfolio-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ff4a4a;
+    background: rgba(255, 0, 0, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 0, 0, 0.15);
+    margin-bottom: 14px;
+}
+
+.portfolio-card-info p {
+    font-size: 0.92rem;
+    color: #b0b0b0;
+    line-height: 1.5;
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.5s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
