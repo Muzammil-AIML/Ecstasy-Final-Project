@@ -23,3 +23,15 @@ def get_db():
         yield db
     finally:
         db.close()
+
+# ── Development Helper ────────────────────────────────────────────────────────
+def reset_database():
+    """
+    Drops all existing tables and recreates them cleanly.
+    Use this to instantly refresh your database schema!
+    """
+    print("🔄 Dropping existing tables...")
+    Base.metadata.drop_all(bind=engine)
+    print("🚀 Recreating fresh tables with new columns...")
+    Base.metadata.create_all(bind=engine)
+    print("✅ Database successfully refreshed!")
