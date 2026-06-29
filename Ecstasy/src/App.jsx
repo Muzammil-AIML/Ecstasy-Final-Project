@@ -392,12 +392,13 @@ function App() {
 
       <div className="cursor-aura" aria-hidden="true"></div>
 
+      {/* ── GLOBAL PARTICLE BACKGROUND (always visible) ── */}
+      <div ref={particlesRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}></div>
+
       {/* ── AUTH WALL GUARD ── */}
       {!authUser ? (
-        <div className="auth-wall-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', background: '#000' }}>
-          <div id="particles" ref={particlesRef} style={{ position: 'absolute', width: '100%', height: '100%', zIndex: 1 }}></div>
-
-          <div className="booking-dialog auth-dialog structural-wall" style={{ position: 'relative', zIndex: 10, background: 'rgba(10, 10, 10, 0.85)', border: '1px solid #ff000033', padding: '40px', borderRadius: '12px', maxWidth: '420px', width: '90%', backdropFilter: 'blur(10px)' }}>
+        <div className="auth-wall-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', background: 'transparent', position: 'relative', zIndex: 1 }}>
+        <div className="booking-dialog auth-dialog structural-wall" style={{ position: 'relative', zIndex: 10, background: 'rgba(10, 10, 10, 0.85)', border: '1px solid #ff000033', padding: '40px', borderRadius: '12px', maxWidth: '420px', width: '90%', backdropFilter: 'blur(10px)' }}>
             {authModal === 'register' ? (
               <>
                 <p className="modal-kicker">Join Ecstasy</p>
@@ -483,7 +484,6 @@ function App() {
 
           {/* ── Hero ── */}
           <section className="hero reveal-zone" id="home">
-            <div id="particles" ref={particlesRef}></div>
             <div className="hero-content reveal-item">
               <h1>
                 CREATE THE
